@@ -11,7 +11,7 @@ public class ConsoleExercises {
 //        String userInput = scanner.next();
 //
 //        System.out.println("You entered: --> \"" + userInput + "\" <--");
-
+        //Enter an integer
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter an integer: ");
@@ -19,21 +19,27 @@ public class ConsoleExercises {
         System.out.println("The number you entered is: " + userInput +".");
         scanner.nextLine();
 
+        //Three Words
         System.out.println("Please enter 3 words: ");
         System.out.println("First: ");
         String first = scanner.next();
+
         System.out.println("Second: ");
         String second = scanner.next();
+
         System.out.println("Third: ");
         String third = scanner.next();
+
         System.out.println("The first word you entered is " + first + ". The second word is " + second + ". The last word is " + third);
         scanner.nextLine();
 
+        //Enter a sentence
         System.out.print("Please enter a sentence: ");
         String sentence = scanner.nextLine();
         System.out.println("You have just entered the sentence: " + sentence);
 //        scanner.nextLine();
 
+        //Size of codeup classroom
         System.out.println("Enter the length and the width of the Codeup classroom below: ");
         System.out.println("length: ");
         String length = scanner.nextLine();
@@ -46,6 +52,7 @@ public class ConsoleExercises {
         scanner.useDelimiter("\n");
         scanner.nextLine();
 
+        //Using int for the classroom problem
         System.out.println("Enter the length and width of the classroom again below:");
         System.out.println("Length: ");
         int length2 = scanner.nextInt();
