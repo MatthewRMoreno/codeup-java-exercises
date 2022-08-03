@@ -58,41 +58,47 @@ public class ControlFlowExercises {
         //Adding in a scanner
         Scanner scanner = new Scanner(System.in);
         //Making table from integer
-//        System.out.println("Please enter an integer: ");
-//        int userValue = scanner.nextInt();
-//        System.out.print("Continue? [y/N] ");
-//        String userInput = scanner.next();
-//        System.out.println("Here is your table!");
-//        System.out.println("number | squared | cubed ");
-//        System.out.println("------ | ------- | -----");
-//
-//        boolean confirmation = userInput.equals("y");
-//
-//        for (int i = 1; i <= userValue; i++) {
-//            int square = (i*i);
-//            int cube = (i*square);
-//            System.out.println(i+"      | "+square+"       | "+cube);
-//        }
-        //Convert number grade to letter grade
-        System.out.println("Enter your current grade: ");
-        System.out.println("Grade: ");
-        long grade = scanner.nextInt();
-        if (grade>=100) {
-            System.out.println("You currently have an A+! Keep up the great work");
-        }else if (grade>=88){
-            System.out.println("You currently have an A! Outstanding Job :)");
-        } else if (grade>=80) {
-            System.out.println("You currently have a B! Great Work :)");
-        } else if (grade>=67) {
-            System.out.println("You currently have a C");
-        } else if (grade>=60) {
-            System.out.println("You currently have D :(");
-        }else
-            System.out.println("You currently have an F :,(");
-        System.out.print("Would you like to continue? [y/n] ");
-        String userInput = scanner.next();
-        boolean confirmation = userInput.equals("y");
+        boolean confirmation;
+        do {
+            System.out.println("Please enter an integer: ");
+            int userValue = scanner.nextInt();
+            System.out.println("Here is your table!");
+            System.out.println("number | squared | cubed ");
+            System.out.println("------ | ------- | -----");
 
+
+            for (int i = 1; i <= userValue; i++) {
+                int square = (i * i);
+                int cube = (i * square);
+                System.out.println(i + "      | " + square + "       | " + cube);
+            }
+            System.out.print("Continue? [y/N] ");
+            String userInput = scanner.next();
+            confirmation = userInput.equals("y");
+        }while(confirmation);
+        //Convert number grade to letter grade
+        boolean confirmation2;
+        do {
+            System.out.println("Enter your current grade: ");
+            System.out.println("Grade: ");
+            long grade = scanner.nextInt();
+            if (grade >= 98) {
+                System.out.println("You currently have an A+! Keep up the great work");
+            } else if (grade >= 88) {
+                System.out.println("You currently have an A! Outstanding Job :)");
+            } else if (grade >= 80) {
+                System.out.println("You currently have a B! Great Work :)");
+            } else if (grade >= 67) {
+                System.out.println("You currently have a C");
+            } else if (grade >= 60) {
+                System.out.println("You currently have D :(");
+            } else
+                System.out.println("You currently have an F :,(");
+
+            System.out.print("Would you like to continue? [y/n] ");
+            String userInput = scanner.next();
+            confirmation2 = userInput.equals("y");
+        }while (confirmation2);
     }
 }
 
