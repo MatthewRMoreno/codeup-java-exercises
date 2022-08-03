@@ -57,7 +57,7 @@ public class ControlFlowExercises {
 //        }
         //Adding in a scanner
         Scanner scanner = new Scanner(System.in);
-//        Making table from integer
+        //Making table from integer
 //        System.out.println("Please enter an integer: ");
 //        int userValue = scanner.nextInt();
 //        System.out.print("Continue? [y/N] ");
@@ -89,6 +89,10 @@ public class ControlFlowExercises {
             System.out.println("You currently have D :(");
         }else
             System.out.println("You currently have an F :,(");
+        System.out.print("Would you like to continue? [y/n] ");
+        String userInput = scanner.next();
+        boolean confirmation = userInput.equals("y");
+
     }
 }
 
