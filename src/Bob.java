@@ -10,7 +10,7 @@ public class Bob {
         String exclamResponse = "Whoa, chill out!";
         String noResponse = "Fine. Be that way!";
         String otherResponse = "Whatever";
-        boolean confirmation2;
+        boolean confirmation;
         //Prompt user to type something for Bob to respond to
         do {
             System.out.println("Type something to speak with Bob :");
@@ -26,8 +26,8 @@ public class Bob {
 
             System.out.print("Would you like to continue speaking with Bob? [y/n] ");
             String userResponse = scanner.nextLine();
-            confirmation2 = userResponse.equalsIgnoreCase("y");
-        }while (confirmation2);
+            confirmation = userResponse.equalsIgnoreCase("y");
+        }while (confirmation);
 
     }
 }
