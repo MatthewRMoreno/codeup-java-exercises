@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -19,7 +21,7 @@ public class MethodsExercises {
         System.out.println(Modulus(first, second));
 
         //ask for 2 numbers
-        System.out.println("Please input 2 numbers");
+        System.out.println("Please input a number range");
         System.out.println("First Number: ");
         int number1 = scanner.nextInt();
         System.out.println("Second Number: ");
@@ -27,6 +29,19 @@ public class MethodsExercises {
         //getInteger method goes here
         System.out.println(getInteger(number1, number2));
 
+        //ask for a number between 1-10
+        System.out.println("Please input a number between 1 and 10");
+        System.out.println("Number: ");
+        int number = scanner.nextInt();
+        //factorial method goes here
+//        System.out.println(number + "!" +  " = " + factorial(number));
+
+        //ask user to input the number of sides for the dice
+        System.out.println("How many sides would you like on the dice?");
+        System.out.println("# of sides: ");
+        int sidesOfDice = scanner.nextInt();
+        //dice simulator goes here
+        System.out.println(diceRoll(sidesOfDice));
     }
     //create the addition method
     public static int Addition(int x, int y) {
@@ -67,15 +82,33 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter a number between " + min + "-" + max);
         int userInput = scanner.nextInt();
-        if(userInput>min && userInput<max) {
+        if(userInput>=min && userInput<=max) {
             return userInput;
         }
         return getInteger(min, max);
     };
     //calculate the factorial of a number
-//    public static int Factorial() {
-//
+//    public static int factorial(int input) {
+//        Scanner scanner = new Scanner(System.in);
+//        int fact = 1;
+//        for (int i = 1; i < input; i++) {
+//            fact += fact * i;
+//        }
+//        return fact;
 //    }
-
-
+    //Dice roll simulation
+    public static String diceRoll(int input) {
+        //input a scanner 
+        Scanner scanner = new Scanner(System.in);
+        //prompt the user to roll the dice
+        System.out.print("Wanna roll some dice? [y/n] ");
+        String userResponse = scanner.nextLine();
+        boolean confirmation = userResponse.equalsIgnoreCase("y");
+        //generate a random number between 1 and the number of sides
+        int rollResult = (int) (Math.random()*input + 1);
+        int rollResult2 = (int) (Math.random()*input + 1);
+        return ("Your rolled a: " + rollResult + " and a "+ rollResult2);
+    }
 }
+
+
