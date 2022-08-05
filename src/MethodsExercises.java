@@ -1,5 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -34,7 +32,7 @@ public class MethodsExercises {
         System.out.println("Number: ");
         int number = scanner.nextInt();
         //factorial method goes here
-//        System.out.println(number + "!" +  " = " + factorial(number));
+        System.out.println(number + "!" +  " = " + factorial(number));
 
         //ask user to input the number of sides for the dice
         System.out.println("How many sides would you like on the dice?");
@@ -42,6 +40,7 @@ public class MethodsExercises {
         int sidesOfDice = scanner.nextInt();
         //dice simulator goes here
         System.out.println(diceRoll(sidesOfDice));
+
     }
     //create the addition method
     public static int Addition(int x, int y) {
@@ -88,17 +87,17 @@ public class MethodsExercises {
         return getInteger(min, max);
     };
     //calculate the factorial of a number
-//    public static int factorial(int input) {
-//        Scanner scanner = new Scanner(System.in);
-//        int fact = 1;
-//        for (int i = 1; i < input; i++) {
-//            fact += fact * i;
-//        }
-//        return fact;
-//    }
+    public static int factorial(int input) {
+        Scanner scanner = new Scanner(System.in);
+        int fact = 1;
+        for (int i = 1; i < input; i++) {
+            fact += fact * i;
+        }
+        return fact;
+    }
     //Dice roll simulation
     public static String diceRoll(int input) {
-        //input a scanner 
+        //input a scanner
         Scanner scanner = new Scanner(System.in);
         //prompt the user to roll the dice
         System.out.print("Wanna roll some dice? [y/n] ");
@@ -107,8 +106,15 @@ public class MethodsExercises {
         //generate a random number between 1 and the number of sides
         int rollResult = (int) (Math.random()*input + 1);
         int rollResult2 = (int) (Math.random()*input + 1);
-        return ("Your rolled a: " + rollResult + " and a "+ rollResult2);
+        //output the 2 numbers
+        System.out.println("Your rolled a: " + rollResult + " and a "+ rollResult2);
+        //ask user if they would like to roll again
+        System.out.print("Wanna roll again? [y/n] ");
+        String userAns = scanner.nextLine();
+        boolean confirm = userAns.equalsIgnoreCase("y");
+        //run the method again
+        return diceRoll(input);
     }
-}
+    }
 
 
