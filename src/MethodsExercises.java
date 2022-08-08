@@ -96,7 +96,7 @@ public class MethodsExercises {
         return fact;
     }
     //Dice roll simulation
-    public static String diceRoll(int input) {
+    public static boolean diceRoll(int input) {
         //input a scanner
         Scanner scanner = new Scanner(System.in);
         //prompt the user to roll the dice
@@ -113,7 +113,7 @@ public class MethodsExercises {
         String userAns = scanner.nextLine();
         boolean confirm = userAns.equalsIgnoreCase("y");
         //run the method again
-        return diceRoll(input);
+        return confirmation;
     }
     }
 
