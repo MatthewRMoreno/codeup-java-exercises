@@ -78,6 +78,7 @@ public class Person {
 //        System.out.println(sue.sayHello());
 //            //prints "Hello from Default Person!
 //        }
+    //exercise
     private String name;
     //constructor for new person
     public Person(String name) {
