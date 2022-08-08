@@ -1,3 +1,5 @@
+package java_one;
+
 public class StringExercise {
     public static <function> void main(String[] args) {
         String statement = "We don't need no education. We don't need no thought control";

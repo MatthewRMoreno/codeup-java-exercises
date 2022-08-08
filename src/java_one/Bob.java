@@ -1,3 +1,5 @@
+package java_one;
+
 import java.util.Scanner;
 
 public class Bob {
@@ -11,9 +13,9 @@ public class Bob {
         String noResponse = "Fine. Be that way!";
         String otherResponse = "Whatever";
         boolean confirmation;
-        //Prompt user to type something for Bob to respond to
+        //Prompt user to type something for java_one.Bob to respond to
         do {
-            System.out.println("Type something to speak with Bob :");
+            System.out.println("Type something to speak with java_one.Bob :");
             String userInput = scanner.nextLine();
             //Produce output of stored responses based on users response
             if (userInput.endsWith("?")) {
@@ -24,7 +26,7 @@ public class Bob {
                 System.out.println(noResponse);
             } else System.out.println(otherResponse);
 
-            System.out.print("Would you like to continue speaking with Bob? [y/n] ");
+            System.out.print("Would you like to continue speaking with java_one.Bob? [y/n] ");
             String userResponse = scanner.nextLine();
             confirmation = userResponse.equalsIgnoreCase("y");
         }while (confirmation);

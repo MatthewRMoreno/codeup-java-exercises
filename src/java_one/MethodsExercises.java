@@ -1,3 +1,5 @@
+package java_one;
+
 import java.util.Scanner;
 
 public class MethodsExercises {
