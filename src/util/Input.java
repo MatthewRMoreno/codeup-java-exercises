@@ -14,15 +14,15 @@ public class Input {
         System.out.println(getDouble);
     }
 
-    private Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
-    public String getString() {
+    public static String getString() {
         System.out.println("Please type something and press enter: ");
         String userInput = scanner.nextLine();
         return "'" + userInput + "'";
     }
 
-    public boolean yesNo() {
+    public static boolean yesNo() {
         System.out.println("Please input yes or no: ");
         String userInput = scanner.nextLine();
         if(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")){
@@ -30,7 +30,7 @@ public class Input {
         }else return false;
     }
 //hasnextint for scanner
-    public int getInt(int min, int max) {
+    public static int getInt(int min, int max) {
         System.out.println("Please enter an integer: ");
 //        boolean userInput = scanner.hasNextInt();
         int userVal = scanner.nextInt();
@@ -45,7 +45,7 @@ public class Input {
         }
     }
 
-    public int getInt() {
+    public static int getInt() {
         System.out.println("Please enter a different integer: ");
         int userInput = scanner.nextInt();
         if (userInput < 20 && userInput > 10) {
@@ -53,12 +53,12 @@ public class Input {
         }else return getInt(10, 20);
     }
 
-    public double getDouble(double min, double max) {
+    public static double getDouble(double min, double max) {
         System.out.println("Please enter a decimal number");
         double userInput = scanner.nextDouble();
         if (userInput > min && userInput < max)
             return userInput;
-        else return getDouble(min, max);
+        else return getDouble(0, 20);
     }
 
 //    public double getDouble(double min, double max) {
