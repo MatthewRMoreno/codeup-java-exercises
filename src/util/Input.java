@@ -1,7 +1,7 @@
 package util;
 import java.util.Scanner;
 public class Input {
-    public static void main(String[] args) {
+    public void main(String[] args) {
         Input scanner = new Input();
         String getString = scanner.getString();
         System.out.println(getString);
@@ -58,7 +58,7 @@ public class Input {
         double userInput = scanner.nextDouble();
         if (userInput > min && userInput < max)
             return userInput;
-        else return getDouble(0, 20);
+        else return getDouble(1, 20);
     }
 
 //    public double getDouble(double min, double max) {
