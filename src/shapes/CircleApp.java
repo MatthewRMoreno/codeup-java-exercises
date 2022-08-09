@@ -1,14 +1,22 @@
 package shapes;
 
+import util.Input;
+
 import java.util.Scanner;
 
 public class CircleApp {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("What is the radius of your circle?");
-        double radius = scanner.nextDouble();
+        Input input = new Input();
 
-        CircleApp Circles = new CircleApp();
-
+        while(true) {
+            double radius = input.getDouble();
+            Circle circle = new Circle(radius);
+            System.out.println(circle.getArea(radius));
+            System.out.println(circle.getCircumference(radius));
+            boolean keepCircle = input.yesNo();
+        if (keepCircle == false) {
+            break;
+        }
+        }
     }
 }
