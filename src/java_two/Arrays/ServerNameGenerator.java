@@ -1,4 +1,4 @@
-package java_two;
+package java_two.Arrays;
 
 import java.util.Random;
 

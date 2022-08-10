@@ -1,4 +1,6 @@
-package java_two;
+package java_two.Arrays;
+
+import java_two.Person;
 
 import java.util.Arrays;
 
