@@ -1,4 +1,4 @@
-package util;
+package java_two.util;
 
 
 public class InputTest {
