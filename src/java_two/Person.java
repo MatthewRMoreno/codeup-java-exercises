@@ -13,6 +13,11 @@ public class Person {
         return name;
     }
 
+    @Override
+    public String toString() {
+        return  name;
+    }
+
     public void setName(String name){
 //TODO: change the name field to the passed value
         this.name = name;
