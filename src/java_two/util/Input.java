@@ -19,7 +19,7 @@ public class Input {
 
     public String getString() {
         String userInput = scanner.nextLine();
-        return "'" + userInput + "'";
+        return userInput;
     }
 
     public boolean yesNo() {
