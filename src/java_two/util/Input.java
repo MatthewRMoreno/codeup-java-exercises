@@ -18,7 +18,6 @@ public class Input {
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-        System.out.println("Please type something and press enter: ");
         String userInput = scanner.nextLine();
         return "'" + userInput + "'";
     }
