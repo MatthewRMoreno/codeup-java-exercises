@@ -58,9 +58,7 @@ public class GradesApplication {
 
             System.out.println("Would you like to see another student?");
             userValue = input.yesNo();
-//            if(!userValue) {
-//                break;
-//            }
+            System.out.println("Goodbye, and have a wonderful day!");
         }while (userValue);
     }
 }
