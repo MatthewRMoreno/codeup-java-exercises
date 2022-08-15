@@ -45,7 +45,6 @@ public class Input {
     }
 
     public int getInt() {
-        System.out.println("Please enter a different integer: ");
         return scanner.nextInt();
     }
 
