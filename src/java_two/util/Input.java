@@ -23,7 +23,7 @@ public class Input {
     }
 
     public boolean yesNo() {
-        System.out.println("Continue? yes or no: ");
+        System.out.println("yes or no?: ");
         String userInput = scanner.nextLine();
         if(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")){
             return true;
@@ -33,7 +33,7 @@ public class Input {
     }
 //hasnextint for scanner
     public int getInt(int min, int max) {
-        System.out.println("Please enter an integer between " + min + "-" + max);
+        System.out.println();
 //        boolean userInput = scanner.hasNextInt();
         int userVal = scanner.nextInt();
         if ( userVal >= min && userVal <= max) {
