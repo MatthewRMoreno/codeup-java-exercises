@@ -1,3 +1,6 @@
+package java_two.GroceryApp;
+
+import java_two.GroceryApp.GroceryItem;
 import java_two.util.Input;
 
 import java.util.ArrayList;

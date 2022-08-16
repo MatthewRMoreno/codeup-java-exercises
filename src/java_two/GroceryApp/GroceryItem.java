@@ -1,3 +1,5 @@
+package java_two.GroceryApp;
+
 public class GroceryItem {
     private String name;
     private int categoryNum;
