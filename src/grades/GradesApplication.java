@@ -54,11 +54,14 @@ public class GradesApplication {
                 System.out.println("Name: " + students.get(userInput).getName());
                 System.out.println("GitHub username: " + userInput);
                 System.out.println("Current Average: " + students.get(userInput).getGradeAverage());
+                System.out.println("Grades: " + students.get(userInput).getGrades());
             }
 
             System.out.println("Would you like to see another student?");
             userValue = input.yesNo();
-            System.out.println("Goodbye, and have a wonderful day!");
+            if(!userValue) {
+                System.out.println("Goodbye, and have a wonderful day!");
+            }
         }while (userValue);
     }
 }
