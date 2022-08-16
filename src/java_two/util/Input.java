@@ -18,8 +18,7 @@ public class Input {
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-        String userInput = scanner.next();
-        return userInput;
+        return scanner.nextLine();
     }
 
     public boolean yesNo() {
@@ -34,7 +33,7 @@ public class Input {
 //hasnextint for scanner
     public int getInt(int min, int max) {
 //        boolean userInput = scanner.hasNextInt();
-        int userVal = scanner.nextInt();
+        int userVal = getInt();
         if ( userVal >= min && userVal <= max) {
             return userVal;
         } else {
@@ -44,7 +43,7 @@ public class Input {
     }
 
     public int getInt() {
-        return scanner.nextInt();
+        return Integer.valueOf(getString());
     }
 
     public double getDouble(double min, double max) {
@@ -55,11 +54,12 @@ public class Input {
             return userInput;
         }
         else
-            System.out.println("Double is not between" + min + "and" + max + ". Enter another double:");
+            System.out.println("Double is not between " + min + " and " + max + ", Enter another double:");
         return getDouble(min, max);
     }
 
     public double getDouble() {
-        return scanner.nextDouble();
+        double newDouble = Double.valueOf(getString());
+        return newDouble;
     }
 }
