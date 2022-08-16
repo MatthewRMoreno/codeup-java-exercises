@@ -18,13 +18,13 @@ public class Input {
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-        String userInput = scanner.nextLine();
+        String userInput = scanner.next();
         return userInput;
     }
 
     public boolean yesNo() {
         System.out.println("yes or no?: ");
-        String userInput = scanner.nextLine();
+        String userInput = getString();
         if(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")){
             return true;
         }else {
@@ -33,7 +33,6 @@ public class Input {
     }
 //hasnextint for scanner
     public int getInt(int min, int max) {
-        System.out.println();
 //        boolean userInput = scanner.hasNextInt();
         int userVal = scanner.nextInt();
         if ( userVal >= min && userVal <= max) {
@@ -55,11 +54,12 @@ public class Input {
             scanner.nextLine();
             return userInput;
         }
-        else return getDouble(min, max);
+        else
+            System.out.println("Double is not between" + min + "and" + max + ". Enter another double:");
+        return getDouble(min, max);
     }
 
     public double getDouble() {
-        System.out.println("Enter a Radius: ");
         return scanner.nextDouble();
     }
 }
