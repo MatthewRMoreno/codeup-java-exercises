@@ -12,7 +12,6 @@ public class Input {
         System.out.println(scanner.getInt());
         double getDouble = scanner.getDouble(1, 20);
         System.out.println(getDouble);
-
     }
 
     private Scanner scanner = new Scanner(System.in);
@@ -59,7 +58,13 @@ public class Input {
     }
 
     public double getDouble() {
-        double newDouble = Double.valueOf(getString());
-        return newDouble;
+        return Double.valueOf(getString());
+     try {
+
+     }catch ("") {
+
+     }finally {
+
+     }
     }
 }
