@@ -1,4 +1,4 @@
-package java_two.GroceryApp;
+package java_two.groceryapp;
 
 public class GroceryItem implements Comparable {
     private String name;

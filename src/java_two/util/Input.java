@@ -42,12 +42,21 @@ public class Input {
     }
 
     public int getInt() {
-        return Integer.valueOf(getString());
+        while (true) {
+            String userInput = getString();
+            try {
+                int userInt = Integer.parseInt(userInput);
+
+                return userInt;
+            } catch (NumberFormatException e) {
+                System.out.println("This isn't int");
+            }
+        }
     }
 
     public double getDouble(double min, double max) {
         System.out.println("Please enter a decimal number between " + min + "-" + max);
-        double userInput = scanner.nextDouble();
+        double userInput = getDouble();
         if (userInput >= min && userInput <= max) {
             scanner.nextLine();
             return userInput;
@@ -58,13 +67,14 @@ public class Input {
     }
 
     public double getDouble() {
-        return Double.valueOf(getString());
-     try {
+            String userInput = getString();
+            try {
+                double userDbl = Double.parseDouble(userInput);
 
-     }catch ("") {
-
-     }finally {
-
-     }
+                return userDbl;
+            } catch (NumberFormatException e) {
+                System.out.println("This isn't a double");
+            }
+            return getDouble();
     }
 }

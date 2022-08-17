@@ -1,5 +1,4 @@
-package java_two.GroceryApp;
-import java_two.GroceryApp.GroceryItem;
+package java_two.groceryapp;
 import java_two.util.Input;
 import java.util.ArrayList;
 import java.util.Collections;
