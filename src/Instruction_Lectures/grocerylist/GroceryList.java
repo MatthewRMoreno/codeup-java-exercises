@@ -7,16 +7,20 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 
 public class GroceryList {
     private ArrayList<GroceryItem> groceryItems;
+//    private GroceryItem [] groceryItems;
 
     public GroceryList() {
         groceryItems = new ArrayList<>();
+//        groceryItems = new GroceryItem[10];
     }
 
     public void addGroceryItem(GroceryItem item) {
-        //array specific
+        // array specific
+//        groceryItems[0] = item;
         groceryItems.add(item);
     }
 
@@ -28,49 +32,55 @@ public class GroceryList {
     }
 
     public void removeGroceryItem(String itemName) {
-        //find the index of the grocery item with itemName
-        int index = -1;
-        for (int i = 0; i < groceryItems.size(); i++) {
-            GroceryItem item = groceryItems.get(i);
-            String itemNameInList = item.getName();
-            if(itemNameInList.equalsIgnoreCase(itemName)){
-                // we found it in the list so save its index
-                index = i;
-            }
-        }
-        //remove the item in the grocery list at that index
+        // 1. find the index of the grocery item with itemName
+        int index = getIndexOfItemByName(itemName);
+
+        // 2. remove the item in the grocery list at that index
         if(index > -1) {
             groceryItems.remove(index);
         }
     }
 
-    public void saveToFile() {
-        //1. make a path object
-        Path file = makeFileAndDirectory();
-        //2. make a temp list of strings that are grocery items and write those to the file
-        List<String> tempItems = new ArrayList<>();
-        for(GroceryItem item : groceryItems) {
-            tempItems.add(item.toString());
-        }
-        //3. use Files.write to send the data to the file
-        try {
-            Files.write(file, groceryItems);
-        }catch(IOException e) {
-
-        }
-    }
-
-    private void makeFileAndDirectory() {
-        try {
-            Path folder = Paths.get("grocery_list");
-            Path file = Paths.get("grocery_list", "data.txt");
-            if(Files.exists(folder)) {
-                System.out.println("Hey the folder already exists!");
-            }else {
-
+    private int getIndexOfItemByName(String itemName) {
+        int index = -1;
+        for (int i = 0; i < groceryItems.size(); i++) {
+            GroceryItem item = groceryItems.get(i);
+            String itemNameInList = item.getName();
+            if(itemNameInList.equalsIgnoreCase(itemName)) {
+                // we found it in the list so save its index
+                return i;
             }
-        }catch (IOException e) {
+        }
+        return index;
+    }
 
+    public void setItemQuantity(String itemName, int quantity) {
+        int index = getIndexOfItemByName(itemName);
+
+        // 2. remove the item in the grocery list at that index
+        if(index > -1) {
+            GroceryItem item = groceryItems.get(index);
+            item.setQuantity(quantity);
         }
     }
+
+    public GroceryItem getItemByName(String itemName) {
+        int index = getIndexOfItemByName(itemName);
+
+        // 2. remove the item in the grocery list at that index
+        if(index > -1) {
+            return groceryItems.get(index);
+        }
+        System.out.println("Could not find item: " + itemName);
+        return null;
+    }
+
+    public List<String> toStringList() {
+        List<String> itemStrings = new ArrayList<>();
+        for(GroceryItem item : groceryItems) {
+            itemStrings.add(item.toString());
+        }
+        return itemStrings;
+    }
+
 }

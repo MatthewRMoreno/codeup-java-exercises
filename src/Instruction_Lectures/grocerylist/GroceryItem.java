@@ -9,6 +9,11 @@ public class GroceryItem {
         this.quantity = quantity;
     }
 
+    public static GroceryItem createFromString(String itemString) {
+        String [] parts = itemString.split(":");
+        return new GroceryItem(parts[0].trim(), Integer.parseInt(parts[1].trim()));
+    }
+
     @Override
     public String toString() {
         return name + ":" + quantity;
