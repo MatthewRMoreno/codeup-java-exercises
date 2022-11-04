@@ -26,6 +26,7 @@ public class Bob {
                 System.out.println(noResponse);
             } else System.out.println(otherResponse);
 
+            //time to push
             System.out.print("Would you like to continue speaking with java_one.Bob? [y/n] ");
             String userResponse = scanner.nextLine();
             confirmation = userResponse.equalsIgnoreCase("y");
