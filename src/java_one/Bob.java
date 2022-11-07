@@ -8,6 +8,7 @@ public class Bob {
         //create a scanner
         Scanner scanner = new Scanner(System.in);
         //store responses
+        //Hard coded responses
         String quesResponse = "Sure";
         String exclamResponse = "Whoa, chill out!";
         String noResponse = "Fine. Be that way!";
