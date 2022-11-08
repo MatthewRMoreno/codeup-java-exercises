@@ -10,6 +10,7 @@ public class Bob {
         //store responses
         //Hard coded responses
         String quesResponse = "Sure";
+        // another hard coded response to be added into the function
         String exclamResponse = "Whoa, chill out!";
         String noResponse = "Fine. Be that way!";
         String otherResponse = "Whatever";
